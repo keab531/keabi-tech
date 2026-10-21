@@ -1,0 +1,234 @@
+/* ==========================================================================
+   KEABI TECH — RESPONSIVE DESIGN & ADAPTIVE LAYOUT
+   Breakpoints: 320px, 480px, 768px, 992px, 1200px+
+   ========================================================================== */
+
+/* Large Tablets & Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-greeting {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    margin-top: 1.5rem;
+  }
+
+  .portrait-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cta-cards-trio {
+    margin-top: 1rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Medium Tablets & Mobile Landscape (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  /* Mobile Slide-Out Navigation Drawer */
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background: var(--bg-surface);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+    border-top: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-card);
+    z-index: 99;
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    width: 100%;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .hero-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box-wrapper {
+    width: 100%;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-cards-trio {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .profile-card {
+    padding: 1.25rem;
+  }
+
+  .terminal-body {
+    padding: 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .modal-container {
+    padding: 0.5rem;
+  }
+
+  .modal-content-inner {
+    padding: 1.25rem 1rem;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .toast {
+    width: 100%;
+  }
+}
+
+/* Print Optimization (for Resume and Clean Document Printing) */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .site-header,
+  .terminal-section,
+  .cta-banner-section,
+  .site-footer,
+  .theme-toggle-btn,
+  .mobile-toggle,
+  .back-to-top-btn,
+  .scroll-progress-bar,
+  .toast-container,
+  .hero-ctas {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .hero-card,
+  .profile-card,
+  .skill-category-card,
+  .project-card {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    break-inside: avoid;
+  }
+
+  h1, h2, h3, .text-accent {
+    color: #ea580c !important;
+  }
+
+  p, span, div {
+    color: #111111 !important;
+  }
+}
