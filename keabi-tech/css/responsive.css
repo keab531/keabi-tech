@@ -1,0 +1,124 @@
+/* ==========================================================================
+   RESPONSIVE — 320px to 1440px+. Mobile-first overrides by breakpoint.
+   ========================================================================== */
+
+/* Large laptops / wide screens */
+@media (min-width: 1440px) {
+  :root { --container: 1280px; }
+}
+
+/* Laptops and below */
+@media (max-width: 1100px) {
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
+}
+
+/* Tablets and large phones: collapse navigation */
+@media (max-width: 900px) {
+  .menu-toggle { display: inline-flex; margin-left: auto; }
+  .nav > .theme-toggle { margin-left: var(--space-2); }
+
+  .menu {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: var(--space-4);
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border-bottom: 1px solid var(--border);
+    transform: translate3d(0, -12px, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  }
+  .menu.is-open { opacity: 1; visibility: visible; transform: translate3d(0, 0, 0); }
+  .menu a { padding: 0.9rem 1rem; font-size: 1rem; border-radius: var(--radius-sm); }
+  .menu a::after { left: 1rem; right: auto; width: 24px; bottom: 0.7rem; }
+  .menu a:hover, .menu a.is-active { background: var(--surface-strong); }
+
+  .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+  .hero-visual { min-height: 0; margin-top: var(--space-6); padding-bottom: 2.5rem; }
+  .terminal { left: 0; bottom: 0; }
+  .handwrite { right: 0; }
+  .about-grid,
+  .contact-grid,
+  .journey-grid { grid-template-columns: 1fr; }
+  .toolbar { grid-template-columns: 1fr 1fr; }
+  .toolbar .chips { grid-column: 1 / -1; }
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .now-list { grid-template-columns: 1fr; }
+}
+
+/* Large phones */
+@media (max-width: 680px) {
+  .projects-grid,
+  .skills-grid { grid-template-columns: 1fr; }
+  .toolbar { grid-template-columns: 1fr; }
+  .select-wrap select { min-width: 0; width: 100%; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .section-head { align-items: flex-start; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+  .hero-actions .btn-icon { width: 100%; }
+  .stats li { padding: 0.9rem 0.25rem; }
+  .stat-label { font-size: 0.7rem; }
+  .contact-form { padding: var(--space-6); }
+  .modal-inner { padding: var(--space-6); }
+  .quote { padding: var(--space-4); }
+}
+
+/* Small phones 320–480px */
+@media (max-width: 480px) {
+  :root {
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.9rem;
+    --section-y: 3.5rem;
+  }
+  .container { width: min(100% - 1.5rem, var(--container)); }
+  .brand-text { font-size: 0.95rem; }
+  .terminal { width: 100%; position: relative; left: auto; bottom: auto; margin-top: var(--space-4); }
+  .halo { width: 100%; }
+  .portrait { width: 100%; }
+  .handwrite { display: none; }
+  .code-float { display: none; }
+  .contact-links li { grid-template-columns: auto 1fr; }
+  .contact-links li > .btn { grid-column: 1 / -1; }
+  .project-card:hover, .skill-card:hover, .now-item:hover { transform: none; }
+  .btn:hover { transform: none; }
+  .footer-bottom { flex-direction: column; }
+  .btn { white-space: normal; text-align: center; }
+  .back-to-top { right: 0.75rem; bottom: 0.75rem; }
+}
+
+/* Touch devices: avoid hover-only effects getting stuck */
+@media (hover: none) {
+  .project-card:hover,
+  .skill-card:hover,
+  .now-item:hover { transform: none; }
+}
+
+/* Print-friendly résumé-style layout */
+@media print {
+  .site-header,
+  .scroll-progress,
+  .bg-layer,
+  .back-to-top,
+  .hero-visual,
+  .hero-actions,
+  .toolbar,
+  .contact-form,
+  .modal,
+  .site-footer { display: none !important; }
+  body { background: #fff; color: #000; }
+  .section { padding-block: 1rem; }
+  .reveal, .js .reveal { opacity: 1 !important; transform: none !important; }
+  .glass { box-shadow: none; background: none; border-color: #ccc; backdrop-filter: none; }
+  a { color: #000; text-decoration: underline; }
+}

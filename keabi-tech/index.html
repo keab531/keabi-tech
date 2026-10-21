@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keabi Tech · Keabzend Bekele Kolcha</title>
+  <meta name="description" content="Keabzend (Keabi), software engineering student and aspiring backend engineer. Backend development, system design and useful digital products.">
+  <meta name="author" content="Keabzend Bekele Kolcha">
+  <meta name="theme-color" content="#07070a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Keabi Tech · Ideas → Production">
+  <meta property="og:description" content="Portfolio of Keabzend (Keabi): backend development, system design and secure software.">
+  <meta property="og:image" content="assets/images/profile.svg">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Set theme and "js" class before first paint -->
+  <script>
+    (function () {
+      var t = "dark";
+      try { t = localStorage.getItem("keabi-theme") || "dark"; } catch (e) {}
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-glow bg-glow--a" data-parallax="0.05"></div>
+    <div class="bg-glow bg-glow--b" data-parallax="-0.04"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Keabi Tech home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 9 4 16l7 7M21 9l7 7-7 7M18 6l-4 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="brand-text"><span data-bind="brand">Keabi Tech</span></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="menu" id="primary-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero section-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal-text" style="--d:0">Hello, I'm</p>
+          <h1 class="hero-title reveal-text" style="--d:1">
+            <span data-bind="name" class="sr-only">Keabzend</span>
+            <span class="hero-name" aria-hidden="true">Keabzend <span class="accent">(Keabi)</span></span>
+          </h1>
+          <p class="hero-role reveal-text" style="--d:2" data-bind="role">Software Engineering Student</p>
+          <h2 class="hero-headline reveal-text" style="--d:3">Turning Ideas Into <span class="accent">Real Software.</span></h2>
+          <p class="hero-intro reveal-text" style="--d:4">
+            I'm Keabzend, known as Keabi—a software engineering student passionate about backend development, system design, and building useful digital products.
+          </p>
+
+          <div class="hero-actions reveal-text" style="--d:5">
+            <a href="#projects" class="btn btn-primary">Explore My Projects <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="btn btn-ghost">Contact Me</a>
+            <a href="#" data-bind-href="github" class="btn btn-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)" title="GitHub" data-hide-empty>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5a4.3 4.3 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+            </a>
+          </div>
+
+          <p class="availability reveal-text" style="--d:6" data-hide-if-no-availability>
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-availability-text>Open to learning opportunities</span>
+          </p>
+        </div>
+
+        <div class="hero-visual reveal-text" style="--d:2">
+          <div class="halo" aria-hidden="true"></div>
+          <figure class="portrait glass">
+            <img src="assets/images/image.png" width="560" height="640" alt="Original illustration of a focused developer in a hooded jacket, lit by an orange glow, with code symbols around them">
+          </figure>
+          <div class="terminal glass" role="img" aria-label="Terminal showing a short introduction">
+            <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span><em>keabi@tech: ~</em></div>
+            <pre class="terminal-body" id="terminal-output" aria-hidden="true"></pre>
+          </div>
+          <span class="code-float code-float--a" aria-hidden="true">&lt;/&gt;</span>
+          <span class="code-float code-float--b" aria-hidden="true">{ }</span>
+          <span class="handwrite" aria-hidden="true">Ideas<br>→ Production</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="stats glass" id="hero-stats">
+          <li><span class="stat-value" data-stat="projects">0</span><span class="stat-label">Projects listed</span></li>
+          <li><span class="stat-value" data-stat="tech">0</span><span class="stat-label">Technologies</span></li>
+          <li><span class="stat-value">Ongoing</span><span class="stat-label">Learning progress</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="section-eyebrow">About me</p>
+          <h2 class="section-title">Who I <span class="accent">Am</span></h2>
+          <p>I'm Keabzend Bekele Kolcha, known as Keabi. I'm a software engineering student at <span data-bind="university">Arba Minch University (AMU)</span>, passionate about building useful software, exploring new technologies, and growing into a strong engineer.</p>
+          <p>I'm especially drawn to Python and backend development. I'm also interested in security, architecture and performance, and I want to build scalable, maintainable systems that solve real problems.</p>
+          <p class="muted">My approach is simple: learn the fundamentals, build real projects, and keep improving the code with each iteration.</p>
+          <blockquote class="quote glass">
+            <p>“Small steps every day create big results.”</p>
+            <cite>— Keabi</cite>
+          </blockquote>
+          <a href="#" data-resume class="btn btn-primary" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download résumé
+          </a>
+        </div>
+
+        <aside class="profile-card glass reveal" aria-label="Profile details" style="--stagger:1">
+          <dl>
+            <div class="profile-row"><dt><span class="row-icon" aria-hidden="true">👤</span>Name</dt><dd data-bind="name"></dd></div>
+            <div class="profile-row"><dt><span class="row-icon" aria-hidden="true">✦</span>Nickname</dt><dd data-bind="nickname"></dd></div>
+            <div class="profile-row"><dt><span class="row-icon" aria-hidden="true">⌖</span>Location</dt><dd data-bind="location"></dd></div>
+            <div class="profile-row"><dt><span class="row-icon" aria-hidden="true">🎓</span>University</dt><dd data-bind="university"></dd></div>
+            <div class="profile-row"><dt><span class="row-icon" aria-hidden="true">⚙</span>Department</dt><dd data-bind="department"></dd></div>
+            <div class="profile-row"><dt><span class="row-icon" aria-hidden="true">✉</span>Email</dt><dd><a data-bind="email" data-bind-href="emailHref" data-hide-empty></a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-eyebrow">My skills</p>
+            <h2 class="section-title">Technologies &amp; <span class="accent">Tools</span></h2>
+            <p class="muted">The technologies and tools I work with, plus the ones I'm learning now.</p>
+          </div>
+        </header>
+        <div class="filter-bar reveal" id="skill-filters" role="group" aria-label="Filter skills by category"></div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-eyebrow">My projects</p>
+            <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+            <p class="muted">A selection of projects I've built to practise, learn and solve real problems. Statuses are honest: Concept, In Progress or Completed.</p>
+          </div>
+        </header>
+
+        <div class="toolbar glass reveal">
+          <label class="search">
+            <span class="sr-only">Search projects by title</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="search" id="project-search" placeholder="Search projects…" autocomplete="off">
+          </label>
+          <div class="chips" id="project-categories" role="group" aria-label="Filter by category"></div>
+          <label class="select-wrap">
+            <span class="sr-only">Filter by technology</span>
+            <select id="tech-filter">
+              <option value="all">All technologies</option>
+            </select>
+          </label>
+          <p class="count muted" id="project-count" aria-live="polite"></p>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"></div>
+
+        <div class="empty-state glass" id="projects-empty" hidden>
+          <p>No projects match these filters.</p>
+          <p class="muted">Try clearing the search or choosing “All”.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOW / JOURNEY ============ -->
+    <section id="journey" class="section">
+      <div class="container journey-grid">
+        <div class="reveal">
+          <p class="section-eyebrow">Engineering journey</p>
+          <h2 class="section-title">What I'm <span class="accent">Working On Now</span></h2>
+          <p class="muted">Current focus areas. This section is updated as real progress is made.</p>
+        </div>
+        <ol class="now-list">
+          <!-- Populated from config.now -->
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="section-eyebrow">Get in touch</p>
+          <h2 class="section-title">Let's Build <span class="accent">Something</span></h2>
+          <p class="muted">Have a question, a project idea, or just want to say hi? I'd love to hear from you.</p>
+
+          <ul class="contact-links">
+            <li>
+              <span class="row-icon" aria-hidden="true">✉</span>
+              <div>
+                <span class="label">Email</span>
+                <a data-bind="email" data-bind-href="emailHref" data-hide-empty></a>
+              </div>
+              <button type="button" class="btn btn-ghost btn-sm" id="copy-email">Copy</button>
+              <span class="sr-only" id="copy-status" role="status"></span>
+            </li>
+            <li>
+              <span class="row-icon" aria-hidden="true">➤</span>
+              <div>
+                <span class="label">Telegram</span>
+                <a data-bind="email" data-bind-href="emailHref" data-hide-empty></a>
+              </div>
+              <button type="button" class="btn btn-ghost btn-sm" id="copy-email">Copy</button>
+              <span class="sr-only" id="copy-status" role="status"></span>
+            </li>
+            <li data-hide-empty-parent>
+              <span class="row-icon" aria-hidden="true">⌖</span>
+              <div><span class="label">Location</span><span data-bind="location"></span></div>
+            </li>
+            <li>
+              <span class="row-icon" aria-hidden="true">➤</span>
+              <div>
+                <span class="label">Telegram</span>
+                <a data-bind="telegramHandle" data-bind-href="telegram" data-hide-empty target="_blank" rel="noopener noreferrer"></a>
+              </div>
+            </li>
+            <li>
+              <span class="row-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5a4.3 4.3 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+              </span>
+              <div>
+                <span class="label">GitHub</span>
+                <a data-bind="github" data-bind-href="github" data-hide-empty target="_blank" rel="noopener noreferrer"></a>
+              </div>
+            </li>
+          </ul>
+
+          <blockquote class="quote quote-inline">
+            <p>“Better code. Better tomorrow.”</p>
+          </blockquote>
+        </div>
+
+    
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand" aria-label="Keabi Tech home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 9 4 16l7 7M21 9l7 7-7 7M18 6l-4 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="brand-text" data-bind="brand">Keabi Tech</span>
+        </a>
+        <p class="accent tagline" data-bind="tagline">Ideas → Production</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h3 class="footer-title">Quick links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3 class="footer-title">Connect</h3>
+        <ul>
+          <li><a data-bind="github" data-bind-href="github" data-hide-empty target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a data-bind="telegramHandle" data-bind-href="telegram" data-hide-empty target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li><a data-bind="email" data-bind-href="emailHref" data-hide-empty>Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> <span data-bind="name"></span>. All rights reserved.</p>
+      <p class="muted">Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top glass" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- ============ PROJECT MODAL (native dialog: focus trap + Esc) ============ -->
+  <dialog class="modal glass" id="project-modal" aria-labelledby="project-modal-title">
+    <div class="modal-inner">
+      <button type="button" class="icon-btn modal-close" aria-label="Close project details">✕</button>
+      <div id="project-modal-body"></div>
+    </div>
+  </dialog>
+
+  <!-- ============ TEMPLATES ============ -->
+  <template id="project-card-template">
+    <article class="project-card glass reveal">
+      <div class="thumb-wrap">
+        <img data-field="thumbnail" width="640" height="400" loading="lazy" alt="">
+        <span class="pill pill-overlay" data-field="category"></span>
+      </div>
+      <div class="card-body">
+        <span class="status" data-field="status"></span>
+        <h3 data-field="title"></h3>
+        <p class="muted" data-field="summary"></p>
+        <ul class="tags" data-field="tags"></ul>
+        <button type="button" class="btn btn-ghost btn-sm" data-open>View details <span aria-hidden="true">→</span></button>
+      </div>
+    </article>
+  </template>
+
+  <template id="skill-card-template">
+    <article class="skill-card glass reveal">
+      <header class="skill-head">
+        <span class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 data-skill-title></h3>
+      </header>
+      <ul class="skill-list" data-skill-list></ul>
+    </article>
+  </template>
+
+  <script src="js/config.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/interactions.js"></script>
+</body>
+</html>
